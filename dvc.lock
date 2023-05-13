@@ -27,30 +27,30 @@ stages:
       params.yaml:
         train.batch_size: 128
         train.dropout: 0.45
-        train.hidden_units: 64
+        train.hidden_units: 128
         train.lr: 0.001
         train.num_epochs: 3
     outs:
     - path: dvclive/metrics.json
       hash: md5
-      md5: 680c103825257ec131e01f638c6e29f5
+      md5: ce95fc5ef832bdcb8ed37bd83006cd3c
       size: 54
     - path: dvclive/plots/metrics/accuracy.tsv
       hash: md5
-      md5: 4b89e4f1a27ae4f65436c1cdd547d9a6
+      md5: b41b270ebbf8d19c43050eb70016c831
       size: 77
     - path: output/myfmmodel.keras
       hash: md5
-      md5: 561bea5bd02801fe164a6de9f775f856
-      size: 3681312
+      md5: 2b6cc57eb3ed108d435569c2ac088b10
+      size: 7324888
     - path: output/myfmmodel.tar.gz
       hash: md5
-      md5: e81a4485277bde8e1203e843f29880e8
-      size: 3347909
+      md5: c34371c574fe7ff0616201add0a13945
+      size: 6798574
     - path: output/train_logs.csv
       hash: md5
-      md5: 59d61f90ad100f8d407e55b7b6923f6e
-      size: 140
+      md5: af0b9a280c24008e1ac39a3c7a7126af
+      size: 142
   evaluate:
     cmd: python src/evaluate.py
     deps:
@@ -60,8 +60,8 @@ stages:
       size: 54950285
     - path: output/myfmmodel.keras
       hash: md5
-      md5: 561bea5bd02801fe164a6de9f775f856
-      size: 3681312
+      md5: 2b6cc57eb3ed108d435569c2ac088b10
+      size: 7324888
     - path: src/evaluate.py
       hash: md5
       md5: d55658c1947e760905f8784a695033b4
@@ -69,14 +69,14 @@ stages:
     outs:
     - path: output/metrics.json
       hash: md5
-      md5: 1b0e288163bdf2470c3fd6edb3fc733f
-      size: 61
+      md5: dc6945f5caeff29be08993d92ca0282c
+      size: 59
     - path: output/predictions.json
       hash: md5
-      md5: 71612520581b4e57d4db2ecce593fc12
+      md5: 3637b5ca51376b1f0f2052b5d31f63f4
       size: 310000
     - path: output/test/samples_of_mispredicted_images/
       hash: md5
-      md5: f10c7ffccadff75f734466c20021b478.dir
-      size: 172217
+      md5: 39be048e726f1736022c17f199a8e331.dir
+      size: 176208
       nfiles: 10
